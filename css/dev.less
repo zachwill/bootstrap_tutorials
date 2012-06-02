@@ -22,16 +22,16 @@ h1, h2, h3 {
 }
 
 .callout {
-    @dark: darken(mix(@purple, @pink, 25), 25%);
-    #gradient > .radial(@pink, @dark);
-    border-bottom: 1px solid darken(@pink, 25%);
+    @dark: darken(mix(@purple, @pink, 50), 15%);
+    #gradient > .radial(@blue, @dark);
+    border-bottom: 1px solid darken(@blue, 25%);
     color: #fff;
     padding: 100px 0;
     h1 {
         font-size: 150px;
         line-height: .9em;
         text-align: center;
-        text-shadow: 4px 4px 0 darken(@pink, 25%);
+        text-shadow: 4px 4px 0 darken(@blue, 25%);
     }
     .tagline {
         font-size: 20px;
@@ -39,7 +39,7 @@ h1, h2, h3 {
         font-weight: 300;
         padding-top: 25px;
         text-align: center;
-        text-shadow: 2px 2px 0 darken(@pink, 25%);
+        text-shadow: 2px 2px 0 darken(@blue, 25%);
     }
     .row {
         .background-image(rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,0));
@@ -50,7 +50,7 @@ h1, h2, h3 {
 .github {
     padding: 50px 0;
     .btn {
-        .buttonBackground(mix(@blue, @purple, 55), @purple);
+        .buttonBackground(mix(@pink, @purple, 25), @purple);
         font-size: 20px;
         padding: 18px 74px;
     }
@@ -78,8 +78,9 @@ h1, h2, h3 {
 }
 
 .ribbon {
-    #gradient > .vertical(@pink, darken(@pink, 25%));
-    height: 6px;
+    @dark: darken(mix(@purple, @pink, 50), 15%);
+    background: @dark;
+    height: 0px;
 }
 
 
@@ -91,5 +92,8 @@ h1, h2, h3 {
     }
     .info h2 {
         font-size: 42px;
+    }
+    .info, .pitch{
+        padding: 100px 0;
     }
 }
