@@ -26,7 +26,10 @@ h1, h2, h3 {
     #gradient > .radial(@blue, @dark);
     border-bottom: 1px solid darken(@blue, 25%);
     color: #fff;
-    padding: 100px 0;
+    padding: 25px 0 125px;
+    img{
+        border-bottom: 1px solid transparent;
+    }
     h1 {
         font-size: 150px;
         line-height: .9em;
@@ -41,7 +44,7 @@ h1, h2, h3 {
         text-align: center;
         text-shadow: 2px 2px 0 darken(@blue, 25%);
     }
-    .row {
+    .gradient {
         .background-image(rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,0));
         padding: 25px 0;
     }
