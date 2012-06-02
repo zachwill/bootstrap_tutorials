@@ -1,0 +1,95 @@
+@import "less/mixins.less";
+
+@pink: #f92672;
+@blue: #23a5e7;
+@purple: #5e23e7;
+
+.background-image(@one, @two, @three) {
+    background-image: -webkit-linear-gradient(left, @one, @two, @three);
+    background-image:    -moz-linear-gradient(left, @one, @two, @three);
+    background-image:     -ms-linear-gradient(left, @one, @two, @three);
+    background-image:      -o-linear-gradient(left, @one, @two, @three);
+}
+
+hr {
+  .background-image(rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+  height: 1px;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+.callout {
+    @dark: darken(mix(@purple, @pink, 25), 25%);
+    #gradient > .radial(@pink, @dark);
+    border-bottom: 1px solid darken(@pink, 25%);
+    color: #fff;
+    padding: 100px 0;
+    h1 {
+        font-size: 150px;
+        line-height: .9em;
+        text-align: center;
+        text-shadow: 4px 4px 0 darken(@pink, 25%);
+    }
+    .tagline {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 300;
+        padding-top: 25px;
+        text-align: center;
+        text-shadow: 2px 2px 0 darken(@pink, 25%);
+    }
+    .row {
+        .background-image(rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,0));
+        padding: 25px 0;
+    }
+}
+
+.github {
+    padding: 50px 0;
+    .btn {
+        .buttonBackground(mix(@blue, @purple, 55), @purple);
+        font-size: 20px;
+        padding: 18px 74px;
+    }
+}
+
+.info {
+    #gradient > .vertical(#eee, #ddd);
+    border-top: 1px solid #ddd;
+    padding: 50px 0;
+    text-shadow: 1px 1px 0 white;
+    h2 {
+        font-size: 38px;
+        text-align: center;
+    }
+    img {
+        margin: 20px 0;
+    }
+}
+
+.pitch {
+    #gradient > .vertical(#333, #111);
+    color: #fff;
+    padding: 50px 0;
+    text-shadow: 1px 1px 0 black;
+}
+
+.ribbon {
+    #gradient > .vertical(@pink, darken(@pink, 25%));
+    height: 6px;
+}
+
+
+
+/* Desktop */
+@media (min-width: 1200px) {
+    .callout h1 {
+        font-size: 170px;
+    }
+    .info h2 {
+        font-size: 42px;
+    }
+}
