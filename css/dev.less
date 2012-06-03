@@ -84,8 +84,17 @@ h1, h2, h3 {
 .sites {
     #gradient > .vertical(#eee, #ddd);
     border-top: 1px solid #ccc;
-    padding: 50px 0;
+    position: relative;
     text-shadow: 1px 1px 0 white;
+    .shadow{
+        background: url(../img/shadow.png) repeat-x;
+        height: 10px;
+        position: absolute;
+        width: 100%;
+    }
+    .container{
+        padding: 50px 0;
+    }
     h2 {
         font-size: 38px;
         text-align: center;
@@ -118,12 +127,6 @@ h1, h2, h3 {
     color: #fff;
     padding: 50px 0;
     text-shadow: 1px 1px 0 black;
-}
-
-.ribbon {
-    @dark: darken(mix(@purple, @pink, 50), 15%);
-    background: @dark;
-    height: 0px;
 }
 
 
@@ -161,7 +164,7 @@ h1, h2, h3 {
     .sites h2 {
         font-size: 42px;
     }
-    .sites, .pitch{
+    .sites .container, .pitch{
         padding: 100px 0;
     }
 }
