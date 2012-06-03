@@ -37,7 +37,10 @@ h1, h2, h3 {
     #gradient > .radial(@blue, @dark);
     border-bottom: 1px solid darken(@blue, 25%);
     color: #fff;
-    padding: 125px 0 125px;
+    position: relative;
+    .container{
+        padding: 125px 0 125px;
+    }
     img{
         border-bottom: 1px solid transparent;
     }
@@ -59,6 +62,13 @@ h1, h2, h3 {
     .gradient {
         .background-image(rgba(0,0,0,0), rgba(0,0,0,.2), rgba(0,0,0,0));
         padding: 25px 0;
+    }
+    .shadow-bottom{
+        background: url(../img/shadow-bottom.png) repeat-x;
+        bottom: 0;
+        height: 5px;
+        position: absolute;
+        width: 100%;
     }
 }
 
@@ -88,7 +98,7 @@ h1, h2, h3 {
     text-shadow: 1px 1px 0 white;
     .shadow{
         background: url(../img/shadow.png) repeat-x;
-        height: 10px;
+        height: 5px;
         position: absolute;
         width: 100%;
     }
