@@ -12,6 +12,14 @@
     background-image:      -o-linear-gradient(left, @one, @two, @three);
 }
 
+.transform(@transformation) {
+  -webkit-transform: @transformation;
+     -moz-transform: @transformation;
+      -ms-transform: @transformation;
+       -o-transform: @transformation;
+          transform: @transformation;
+}
+
 hr {
   .background-image(rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
   border: 0;
@@ -30,7 +38,7 @@ h1, h2, h3 {
     #gradient > .radial(@blue, @dark);
     border-bottom: 1px solid darken(@blue, 25%);
     color: #fff;
-    padding: 100px 0 100px;
+    padding: 125px 0 125px;
     img{
         border-bottom: 1px solid transparent;
     }
@@ -85,6 +93,13 @@ h1, h2, h3 {
     }
     img {
         margin: 20px 0;
+    }
+    a {
+        display: block;
+        &:hover, &:focus {
+            .transform(rotate(-2deg) scale(1.1));
+            .transition(all 0.3s ease-out);
+        }
     }
 }
 
