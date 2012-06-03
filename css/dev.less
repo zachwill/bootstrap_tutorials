@@ -56,10 +56,14 @@ h1, h2, h3 {
 }
 
 .github {
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 60px;
     padding: 50px 0;
+    text-align: center;
     .btn {
         .buttonBackground(mix(@pink, @purple, 25), @purple);
         font-size: 20px;
+        margin-left: 80px;
         padding: 18px 74px;
     }
 }
@@ -92,6 +96,16 @@ h1, h2, h3 {
 }
 
 
+/* Desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+    .github{
+        padding: 35px 0;
+        font-size: 48px;
+        .btn{
+            padding: 14px 60px;
+        }
+    }
+}
 
 /* Desktop */
 @media (min-width: 1200px) {
