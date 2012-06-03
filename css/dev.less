@@ -29,7 +29,8 @@ hr {
 }
 
 h1, h2, h3 {
-    font-weight: 300;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-weight: 400;
 }
 
 .callout {
@@ -45,9 +46,7 @@ h1, h2, h3 {
         border-bottom: 1px solid transparent;
     }
     h1 {
-        font-family: "Yanone Kaffeesatz", sans-serif;
         font-size: 160px;
-        font-weight: 400;
         line-height: .8em;
         text-align: center;
         text-shadow: 4px 4px 0 darken(@blue, 25%);
@@ -106,7 +105,9 @@ h1, h2, h3 {
         padding: 50px 0;
     }
     h2 {
+        font-family: "Helvetica Neue", sans-serif;
         font-size: 38px;
+        font-weight: 300;
         text-align: center;
     }
     h3 {
@@ -114,9 +115,7 @@ h1, h2, h3 {
         border: 1px solid #888;
         color: #fff;
         display: block;
-        font-family: "Yanone Kaffeesatz", sans-serif;
         font-size: 48px;
-        font-weight: 400;
         margin: 20px auto;
         padding: 50px 0;
         text-align: center;
@@ -136,11 +135,21 @@ h1, h2, h3 {
     #gradient > .vertical(#333, #111);
     color: #fff;
     padding: 50px 0;
-    text-shadow: 1px 1px 0 black;
+    text-shadow: 2px 2px 0 black;
+    h2 {
+        font-size: 48px;
+        line-height: .9em;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.4em;
+        padding-right: 10px;
+    }
 }
 
 
-/* Desktop */
+/* Tablet */
 @media (min-width: 768px) and (max-width: 979px) {
     .github{
         font-size: 48px;
@@ -159,6 +168,15 @@ h1, h2, h3 {
             font-size: 12px;
         }
     }
+    .pitch {
+        h2 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 13px;
+            padding-right: 20px;
+        }
+    }
 }
 
 /* Desktop */
@@ -171,10 +189,24 @@ h1, h2, h3 {
             font-size: 22px;
         }
     }
-    .sites h2 {
-        font-size: 42px;
+    .sites {
+        .container {
+            padding: 100px 0;
+        }
+        h2 {
+            font-size: 42px;
+        }
     }
-    .sites .container, .pitch{
-        padding: 100px 0;
+    .pitch {
+        .container{
+            padding: 75px 0;
+        }
+        h2{
+            font-size: 60px;
+        }
+        p {
+            font-size: 18px;
+            padding-right: 50px;
+        }
     }
 }
