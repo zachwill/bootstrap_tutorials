@@ -1,4 +1,4 @@
 booties
 =======
 
-Quick and dirty Bootstrap tutorials.
+Quick Bootstrap tutorials that don't stink.
