@@ -82,7 +82,7 @@ h1, h2, h3 {
     }
 }
 
-.info {
+.sites {
     #gradient > .vertical(#eee, #ddd);
     border-top: 1px solid #ccc;
     padding: 50px 0;
@@ -91,15 +91,26 @@ h1, h2, h3 {
         font-size: 38px;
         text-align: center;
     }
-    img {
-        margin: 20px 0;
-    }
-    a {
+    h3 {
+        .buttonBackground(#aaa, #999);
+        border: 1px solid #888;
+        color: #fff;
         display: block;
+        font-family: "Yanone Kaffeesatz", sans-serif;
+        font-size: 48px;
+        font-weight: 400;
+        margin: 20px auto;
+        padding: 50px 0;
+        text-align: center;
+        text-shadow: 2px 2px 0 #555;
+        width: 100%;
         &:hover, &:focus {
-            .transform(rotate(-2deg) scale(1.1));
-            .transition(all 0.3s ease-out);
+            color: #fff;
+            text-decoration: none;
         }
+    }
+    p {
+        font-size: 16px;
     }
 }
 
